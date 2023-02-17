@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class IsEven {
+
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter # of integers: ");
+        int count = scanner.nextInt();
+
+        for (int i = 1; i <= count; i++) {
+            System.out.print("Enter an integer: ");
+            int num = scanner.nextInt();
+            System.out.printf("%d is %s%n", num, isEven(num) ? "even" : "odd");
+        }
+    }
+
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+}
